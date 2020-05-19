@@ -2,7 +2,7 @@
   <div class="container">
     <div class="todos">
       <md-field>
-        <label>Jot it down...</label>
+        <label class="black"><b>Jot it down...</b></label>
         <md-input
           v-model="currentTodo"
           class="todo-item form-control input-height"
@@ -11,12 +11,10 @@
         >
         </md-input>
       </md-field>
-
       <div v-for="todo in todos" :key="todo.id">
         <span v-if="!todo.editing">
           {{ todo.label }}
         </span>
-
         <span v-if="!todo.editing" @dblclick="todo.editing = true">
           {{ todo.description }}
           <button
@@ -29,7 +27,6 @@
           <button @click="removeTodo(todo)">Delete</button>
           <input type="checkbox" id="checkbox" v-model="boolean" />
         </span>
-
         <md-field>
           <md-input
             v-model="todo.label"
@@ -83,27 +80,29 @@ export default {
 
 <style>
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+
 body {
-  font-family: Roboto, Arial, sans-serif;
-  background-color: antiquewhite;
+font-family: 'Share Tech Mono', monospace;
 }
 
 .container {
   width: 70%;
-  font-family: Roboto, Arial, sans-serif;
+font-family: 'Share Tech Mono', monospace;
   margin: auto;
   display: block;
 }
-todo-item {
-  justify-content: left;
-  width: 100%;
-  display: block;
-  border: none;
+
+div,
+span {
+  display: inline;
+  padding: 0px;
+  border:1px;
 }
 
-.todo-row,
-.md-field {
-  display: block;
-  color: red;
+.md-field.md-theme-default.md-focused .md-input{
+    color: red;
 }
+
 </style>
