@@ -3,7 +3,9 @@
   <div class="container">
     <div class="todo">
 
-<h2>{{todoCounter().length}} Tasks Completed</h2>
+
+<h2 style="float:left;">{{this.todos.length-todoCounter().length}} Tasks Left</h2>
+<h2 style="float:right;">{{todoCounter().length}} Tasks Completed</h2>
 
 
       <md-field>
@@ -94,6 +96,9 @@ export default {
     },
     todoCounter () {
   return this.todos.filter(value => value.completed === true)
+},
+    totalTodos () {
+  return this.todos.length
 }
   },
 };
