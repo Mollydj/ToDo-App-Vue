@@ -30,8 +30,9 @@
           type="checkbox"
           id="checkbox"
           v-model="boolean"
-          style="float:right"
+          style="float:right;"
         />
+                <button @click="removeTodo(todo)" class="delete-button">Delete</button>
         <button
           type="button"
           @click="todo.editing = true"
@@ -40,7 +41,7 @@
           Edit
         </button>
 
-        <button @click="removeTodo(todo)" class="delete-button">Delete</button>
+
 
 
 
@@ -99,6 +100,11 @@ body {
   font-family: "Share Tech Mono", monospace;
   margin: auto;
   display: block;
+}
+
+input[type="text"] {
+  font-family: "Share Tech Mono", monospace;
+  border: 0px;
 }
 
 div,
