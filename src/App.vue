@@ -105,6 +105,7 @@ export default {
 
 body {
   font-family: "Share Tech Mono", monospace;
+  background-color: lightblue;
 }
 
 .container {
@@ -119,10 +120,6 @@ input[type="text"] {
   border: 0px;
 }
 
-.strike {
-  color: red;
-  text-decoration: line-through;
-}
 
 div,
 span {
