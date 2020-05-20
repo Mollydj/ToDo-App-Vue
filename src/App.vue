@@ -11,7 +11,6 @@
         >
         </md-input>
       </md-field>
-
       <div v-for="todo in todos" :key="todo.id">
         <span v-if="!todo.editing">
           {{ todo.label }}
@@ -31,6 +30,7 @@
           id="checkbox"
           v-model="boolean"
           style="float:right;"
+          @click="completetodo(todo)" 
         />
                 <button @click="removeTodo(todo)" class="delete-button">Delete</button>
         <button
