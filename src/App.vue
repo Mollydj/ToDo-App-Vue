@@ -11,6 +11,7 @@
         >
         </md-input>
       </md-field>
+
       <div v-for="todo in todos" :key="todo.id">
         <span v-if="!todo.editing">
           {{ todo.label }}
@@ -28,9 +29,9 @@
         <input
           type="checkbox"
           id="checkbox"
-          v-model="boolean"
+          v-model="todo.completed"
           style="float:right;"
-          @click="completetodo(todo)" 
+          @click="completetodo(todo)"
         />
                 <button @click="removeTodo(todo)" class="delete-button">Delete</button>
         <button
@@ -77,11 +78,12 @@ export default {
     },
     edittodo: function(todo) {
       todo.editing = false;
-      console.log(todo);
     },
     completetodo: function(todo) {
       todo.completed = true;
-      console.log(todo.completed);
+      console.log(todo.completed)
+      console.log(todo.completed.length + 'todos completed')
+      
     },
   },
 };
