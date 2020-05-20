@@ -1,7 +1,13 @@
 <template>
+
   <div class="container">
-    <div class="todos">
+    <div class="todo">
+
+<h2>{{todoCounter().length}} Tasks Completed</h2>
+
+
       <md-field>
+        
         <label class="black"><b>Jot it down...</b></label>
         <md-input
           v-model="currentTodo"
@@ -10,9 +16,11 @@
           @keydown.enter="addTodo()"
         >
         </md-input>
+        
       </md-field>
 
       <div v-for="todo in todos" :key="todo.id">
+        
         <span v-if="!todo.editing">
           {{ todo.label }}
         </span>
@@ -42,17 +50,16 @@
           Edit
         </button>
 
-
-
-
-
         <br />
       </div>
     </div>
   </div>
+
+  
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -60,9 +67,11 @@ export default {
       currentTodo: "",
       editTodo: "",
       boolean: false,
+      totalChecked:0
     };
   },
   methods: {
+    
     addTodo() {
       this.todos.push({
         id: this.todos.length,
@@ -81,10 +90,11 @@ export default {
     },
     completetodo: function(todo) {
       todo.completed = true;
-      console.log(todo.completed)
-      console.log(todo.completed.length + 'todos completed')
-      
+            todo.counter = document.querySelectorAll('input[type="checkbox"]:checked').length ;
     },
+    todoCounter () {
+  return this.todos.filter(value => value.completed === true)
+}
   },
 };
 </script>
