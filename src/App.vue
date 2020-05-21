@@ -85,7 +85,7 @@ export default {
 /* You can add global styles to this file, and also import other style files */
 body {
   font-family: Roboto, Arial, sans-serif;
-  background-color: antiquewhite;
+  background-color: lightblue;
 }
 
 .container {
