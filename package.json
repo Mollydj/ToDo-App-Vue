@@ -10,6 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
+    "vue-generate-component": "^3.0.1",
+    "vue-input-autowidth": "^1.0.10",
     "vue-material": "^1.0.0-beta-13",
     "vue-material-checkbox": "^2.2.0"
   },
@@ -35,6 +37,9 @@
       "parser": "babel-eslint"
     },
     "rules": {}
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
   },
   "browserslist": [
     "> 1%",
