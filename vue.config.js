@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: /ToDo-App-Vue/
+    publicPath: 'ToDo-App-Vue'
     }
