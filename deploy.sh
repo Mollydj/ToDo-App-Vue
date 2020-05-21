@@ -13,6 +13,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:Mollydj/ToDo-App-Vue.git master:gh-pages
+git push -f mollyDeangelisjimenez@gmail.com:Mollydj/ToDo-App-Vue.git master:gh-pages
 
 cd -ssh-keygen -t rsa -b 4096 -C "
