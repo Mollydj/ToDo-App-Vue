@@ -84,7 +84,6 @@ export default {
     },
     completetodo: function(todo) {
       todo.completed = true;
-
       todo.counter = document.querySelectorAll(
         'input[type="checkbox"]:checked'
       ).length;
@@ -102,32 +101,26 @@ export default {
 <style>
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
-
 body {
   font-family: "Share Tech Mono", monospace;
   background-color: lightblue;
 }
-
 .container {
   width: 70%;
   font-family: "Share Tech Mono", monospace;
   margin: auto;
   display: block;
 }
-
 input[type="text"] {
   font-family: "Share Tech Mono", monospace;
   border: 0px;
 }
-
-
 div,
 span {
   display: inline;
   padding: 0px;
   border: 1px;
 }
-
 button {
   font-family: "Share Tech Mono", monospace;
   border: none;
